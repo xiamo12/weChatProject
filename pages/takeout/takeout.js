@@ -167,7 +167,7 @@ Page({
     }
     let newList = this.data.imgsList;
     newList[index].num = num;
-
+    //关联到购物车里商品➖1
     let newShoppingList = this.data.shoppingList
     console.log(newShoppingList)
     for (let i = 0; i < newShoppingList.length; i++) {
@@ -303,6 +303,23 @@ Page({
     this.setData({
       shoppingList: newShoppingList,
       imgsList: newList
+    });
+    this.countNum();
+    this.count()
+  },
+  // 清空购物车
+  clearall: function(){
+    let newShoppingList = this.data.shoppingList;
+    let newList = this.data.imgsList
+    for (let i = 0; i < newShoppingList.length; i++){
+      newShoppingList.splice(0, newShoppingList.length);
+    }
+    newList.forEach(function(item,index){
+      item.num = 0
+    })
+    this.setData({
+      shoppingList: newShoppingList,
+      imgsList:newList
     });
     this.countNum();
     this.count()

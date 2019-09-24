@@ -50,7 +50,7 @@
   <view class="cover_layer_detail" wx:if="{{ifShow}}" animation="{{animationData}}">
     <view class="cover_layer_detail_top">
       <text>已选商品</text>
-      <text>清空购物车</text>
+      <text bindtap="clearall">清空购物车</text>
     </view>
     <view class="cover_layer_detail_content" wx:for="{{shoppingList}}" wx:key="{{index}}">
       <view>{{item.type}}</view>
