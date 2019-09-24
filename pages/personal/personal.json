@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Items":"../../components/Items/Items"
+  },
+  "navigationBarTitleText": "personal"
+}

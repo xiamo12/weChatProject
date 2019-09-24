@@ -1,0 +1,44 @@
+/* pages/order/order.wxss */
+.map_container{
+    height: 450px;
+    width: 100%;
+}
+
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+
+.order_bottom{
+  position: absolute;
+  width: 100%;
+  top: 950rpx;
+  left: 0;
+  right: 0;
+  bottom: 60rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.order_bottom text{
+  margin-bottom: 20rpx;
+  letter-spacing: 3rpx;
+  font-size: 26rpx;
+  font-weight: 300;
+  color: #888
+}
+.order_bottom text:nth-child(1){
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #999
+}
+.order_bottom_btn{
+  height: 76rpx;
+  width: 700rpx;
+  line-height: 76rpx;
+  text-align: center;
+  border-radius: 30rpx;
+  background: #f8fb55;
+}

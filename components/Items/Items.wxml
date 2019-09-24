@@ -1,0 +1,10 @@
+<view class="cards" wx:for="{{detailList}}" wx:key="{{index}}">
+  <view class="card_item">
+    <image src="{{item.img}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+  <view class="card_detail">
+    <text>{{item.detail}}</text>
+    <image src="../../icons/xiangyou.png"></image>
+  </view>
+</view>

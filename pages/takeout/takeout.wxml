@@ -1,0 +1,65 @@
+<!-- 果茶列表 -->
+<view class="order_lists">
+  <!-- 左侧菜单 -->
+  <view class="order_lists_left">
+    <scroll-view scroll-y enable-flex wx:for="{{orderList}}" wx:key="{{index}}" class="order_item {{index===currentIndex?'click_down':''}}" data-index="{{index}}" bindtap="changetap">
+      {{item}}
+    </scroll-view>
+  </view>
+  <!-- 右侧详情 -->
+  <view class="order_lists_right">
+    <scroll-view wx:for="{{imgsList}}" wx:key="{{index}}" data-index="{{item.id}}" class="order_right_item" enable-flex bindtap="orderCardchange">
+      <view class="order_imgs">
+        <image src="{{item.detail.imgSrc}}"></image>
+      </view>
+      <view class="details">
+        <text class="order_title">{{item.detail.type}}</text>
+        <text class="order_detail">{{item.detail.detail}}</text>
+        <view class="buy_item">
+          <text class="buy_item_price">¥{{item.price}}</text>
+          <view class="buy_item_btn">
+            <text bindtap="deleteNum" data-num="{{item.num}}" data-index="{{index}}" data-count="{{count}}">➖</text>
+            <text>{{item.num}}</text>
+            <text bindtap="addNum" data-num="{{item.num}}" data-index="{{index}}">➕</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<!-- 底部购物车 -->
+<view class="bottom">
+  <!-- 购物车左侧：图标+总价 -->
+  <view class="bottom_left">
+    <view class="bottom_left_img_wrap {{count===0?'hover':''}}" data-count="{{count}}" bindtap="{{allPrice===0?'':'carsconfirm'}}">
+      <image src="../../icons/gou_wu_che2.png"></image>
+      <block>
+        <text class="{{count===0?'':'count_num'}}">{{count===0?'':count}}</text>
+      </block>
+    </view>
+    <text>{{allPrice===0?'未选购商品':'¥'+allPrice}}</text>
+  </view>
+  <!-- 购物车右侧：去下单 -->
+  <view class="bottom_right_light {{allPrice===0?'cancel':''}}">
+    <navigator url="{{allPrice===0?'':'../shopping/shopping'}}" open-type="navigate">去下单</navigator>
+  </view>
+
+
+  <!-- 遮罩层 -->
+  <view class="cover_layer" bindtap="hideModal" wx:if="{{ifShow}}"></view>
+  <view class="cover_layer_detail" wx:if="{{ifShow}}" animation="{{animationData}}">
+    <view class="cover_layer_detail_top">
+      <text>已选商品</text>
+      <text>清空购物车</text>
+    </view>
+    <view class="cover_layer_detail_content" wx:for="{{shoppingList}}" wx:key="{{index}}">
+      <view>{{item.type}}</view>
+      <view class="cover_layer_detail_content_price">¥{{item.price}}</view>
+      <view class="cover_layer_detail_content_count">
+        <text bindtap="deleteItem" data-index="{{index}}" data-num="{{item.num}}">➖</text>
+        <text>{{item.num}}</text>
+        <text bindtap="addItem" data-index="{{index}}" data-num="{{item.num}}">➕</text>
+      </view>
+    </view>
+  </view>
+</view>

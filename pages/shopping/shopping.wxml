@@ -1,0 +1,5 @@
+<view class="shopping_car" bindtap="clickonme">点击我出现弹出框</view>
+<view class="bg" wx:if="{{showStatus}}" bindtap="hideModel"></view>
+<view class="client" animation="{{animationData}}" wx:if="{{showStatus}}">
+
+</view>

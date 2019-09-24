@@ -1,0 +1,204 @@
+
+/* 果茶列表左 */
+.order_lists{
+  /* display: flex;
+  flex-direction: row; */
+}
+.order_lists_left{
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 180rpx;
+  font-size: 28rpx;
+  background: #f4f4f4;
+}
+.order_item{
+  width: 160rpx;
+  height: 160rpx;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+}
+.click_down{
+  background: white
+}
+/* 右侧详情 */
+.order_lists_right{
+  margin-left: 200rpx;
+  margin-bottom: 110rpx;
+}
+.order_right_item{
+  width: 100%;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #e9e7e2
+}
+.order_right_item image{
+  width: 180rpx;
+  height: 180rpx;
+}
+.details{
+  width: 380rpx;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.order_title{
+  padding: 15rpx 0;
+}
+.order_detail{
+  width: 340rpx;
+  height: 143rpx;
+  line-height: 45rpx;
+  color: #ccc;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+.buy_item{
+  width: 340rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.buy_item_btn{
+  width: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 24rpx;
+}
+.buy_item_btn text{
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  background: yellow;
+  border-radius: 50%;
+}
+.buy_item_btn text:nth-child(2){
+  width: 50rpx;
+  height: 50rpx;
+  background: white
+}
+/* 底部购物车 */
+.bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+.bottom_left{
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 100rpx;
+}
+.bottom_left>text{
+  color: #777;
+  font-size: 28rpx;
+}
+.bottom_left_img_wrap{
+  position: relative;
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  /* background: #f4f4f4; */
+  background: yellow
+}
+.hover{
+  background: #f4f4f4;
+}
+.count_num{
+  position: absolute;
+  top: 0;
+  right: 2rpx;
+  width: 35rpx;
+  height: 35rpx;
+  line-height: 30rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: white;
+  background: red;
+  border-radius: 50%;
+}
+.bottom_left_img_wrap image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.bottom_right_light{
+  flex: 1;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  background: yellow;
+}
+.cancel{
+  background: #f4f4f4
+}
+
+/* 遮罩层 */
+.cover_layer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ccc;
+  opacity: 0.6
+}
+.cover_layer_detail{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 600rpx;
+  z-index: 100;
+  background: white;
+}
+.cover_layer_detail_top{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx;
+  font-size: 26rpx;
+  font-weight: 300;
+  background: #f4f4f4
+}
+.cover_layer_detail_content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx;
+  font-size: 30rpx;
+  font-weight: 300;
+}
+.cover_layer_detail_content_count{
+  position: relative;
+  width: 200rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: #f4f4f4
+}
+.cover_layer_detail_content_price{
+  position: absolute;
+  right: 300rpx;
+  z-index: 200;
+}
+.cover_layer_detail_content_count text:nth-child(2){
+  width: 100rpx;
+  height: 100%;
+  background: white;
+}

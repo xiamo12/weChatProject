@@ -1,0 +1,20 @@
+<!-- 头像区域 -->
+<view>
+  <image src="../../icons/backgroundcolor.png" class="header_bg"></image>
+</view>
+<!-- 茶币 -->
+<view class="coin_container">
+  <view class="coin_item">
+    <text class="icon_name">茶多分</text>
+    <text class="icon_count">0</text>
+  </view>
+  <view class="center_line">|</view>
+  <view class="coin_item">
+    <text class="icon_name">有茶币</text>
+    <text class="icon_count">0</text>
+  </view>
+</view>
+<!-- 权益列表 -->
+<view>
+  <Items />
+</view>

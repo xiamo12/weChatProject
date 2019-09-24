@@ -1,0 +1,47 @@
+<!-- 头部轮播图 -->
+<view class="header">
+  <swiper indicator-dots circular autoplay class="cards" duration="1000" interval="4000">
+    <swiper-item wx:for="{{imgList}}" wx:key="{{index}}">
+      <image src="{{item.imgSrc}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 头部提示 -->
+
+  <navigator url="../personal/personal" open-type="reLaunch">
+    <view class="header_tips">
+      <image src="../../icons/zuanshi.png"></image>
+      <text>完善信息获得更多积分更体贴的服务</text>
+      <image src="../../icons/xiangyou.png"></image>
+    </view>
+  </navigator>
+</view>
+<!-- 点单 -->
+<view class="order_cards">
+  <!-- 堂食 -->
+  <view class="order">
+    <image src="../../icons/yinliao.png"></image>
+    <view class="order_type">
+      <text>堂食点单</text>
+      <text>选一杯喜欢的茶吧</text>
+    </view>
+    <navigator open-type="navigate" url="../order/order">
+      <view class="order_btn">点单</view>
+    </navigator>
+  </view>
+  <!-- 外卖 -->
+  <view class="order">
+    <image src="../../icons/gouwuche_4.png"></image>
+    <view class="order_type">
+      <text>外卖点单</text>
+      <text>今日饮茶未</text>
+    </view>
+    <navigator url="../takeout/takeout" open-type="navigate">
+      <view class="order_btn">外卖</view>
+    </navigator>
+  </view>
+</view>
+<!-- 广告图片 -->
+
+<view wx:for="{{imgList}}" wx:key="{{index}}" mode="scrollToFill" class="img_item">
+  <image src="{{item.imgSrc}}"></image>
+</view>

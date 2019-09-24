@@ -1,0 +1,31 @@
+/* pages/personal/personal.wxss */
+.header_bg{
+  width: 100%;
+  height: 300rpx;
+}
+.coin_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 200rpx;
+  /* background: pink; */
+}
+.center_line{
+  font-size: 70rpx;
+  font-weight: 100;
+  color: #ccc
+
+}
+.icon_count{
+  margin-top: 10rpx;
+  font-size: 40rpx;
+  color: orange;
+}
+.coin_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}

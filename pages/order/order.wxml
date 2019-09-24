@@ -1,0 +1,20 @@
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap">
+  </map>
+</view>
+<view class="order_bottom">
+  <text>{{placeData.title}}</text>
+  <text>{{placeData.address}}</text>
+  <text>{{placeData.telephone}}</text>
+  <navigator url="../takeout/takeout" open-type="navigate">
+    <view class="order_bottom_btn">进入菜单</view>
+  </navigator>
+</view>
+
+<!-- <view  class="order_bottom">
+  <text>曙光星城A栋</text>
+  <text>洪山区关山大道纺织路13号</text>
+    <navigator url="../takeout/takeout" open-type="navigate">
+    <view class="order_bottom_btn">进入菜单</view>
+  </navigator>
+</view> -->
